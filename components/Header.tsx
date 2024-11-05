@@ -1,4 +1,5 @@
 import React from "react";
+import Link from 'next/link'
 import { useRouter } from "next/router";
 
 const Header: React.FC = () => {
@@ -6,13 +7,13 @@ const Header: React.FC = () => {
   const isActive: (pathname: string) => boolean = (pathname) =>
     router.pathname === pathname;
 
-  let left = (
+  const left = (
     <div className="left">
-      <a href="/">
+      <Link href="/">
         <div className="bold" data-active={isActive("/")}>
           Feed
         </div>
-      </a>
+      </Link>
       <style jsx>{`
         .bold {
           font-weight: bold;
@@ -35,7 +36,7 @@ const Header: React.FC = () => {
     </div>
   );
 
-  let right = null;
+  const right = null;
 
   return (
     <nav>

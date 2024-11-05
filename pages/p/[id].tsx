@@ -30,7 +30,7 @@ const Post: React.FC<PostProps> = (props) => {
       <div>
         <h2>{title}</h2>
         <p>By {props?.author?.name || "Unknown author"}</p>
-        <h3 children={props.content} />
+        <h3>{props.content}</h3>
       </div>
       <style jsx>{`
         .page {
