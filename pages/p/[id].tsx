@@ -3,7 +3,7 @@ import { GetServerSideProps } from "next"
 import Layout from "../../components/Layout"
 import { PostProps } from "../../components/Post"
 
-export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+export const getServerSideProps: GetServerSideProps = async () => {
   const post = {
     id: "1",
     title: "Prisma is the perfect ORM for Next.js",

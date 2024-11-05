@@ -18,7 +18,7 @@ const Post: React.FC<{ post: PostProps }> = ({ post }) => {
     <div onClick={() => Router.push("/p/[id]", `/p/${post.id}`)}>
       <h2>{post.title}</h2>
       <small>By {authorName}</small>
-      <h3 children={post.content} />
+      <h3>{post.content}</h3>
       <style jsx>{`
         div {
           color: inherit;
